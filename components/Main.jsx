@@ -1,21 +1,35 @@
 "use client";
 
 import { Box,Typography,Button } from "@mui/material";
+import { useEffect,useState } from "react";
 import CardItem from "./CardItem";
+import BASE_URL from '../app/config.js'
 
 function Main() {
 
+  const [data,setData]=useState(null)
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}/api/Product`);
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
   
-  
+console.log(data)
+
     return (
-      <>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography sx={{ ml: '4px' }} variant="h1">
-            최근리뷰{' '}
-          </Typography>
-       
-        </Box>
-  
+
+    
+  <Box>
         <Box
           sx={{
             display: 'grid',
@@ -25,42 +39,33 @@ function Main() {
             width: { xs: '100%' },
           }}
         >
-              <Box
-                sx={{
-                  padding: '16px',
-                  border: '1px solid rgb(52, 52, 52)',
-                  borderRadius: '16px 16px 16px 16px',
-                }}
-              >
-                <CardItem/>
-              </Box>
+          {data?.product? (data?.product.map((products,index)=>(
+  <Box
+  key={index}
+  sx={{
+    padding: '16px',
+    border: '1px solid rgb(52, 52, 52)',
+    borderRadius: '16px 16px 16px 16px',
+  }}
+>
+  <CardItem 
+  data={products} 
 
+  />
 
-              <Box
-                sx={{
-                  padding: '16px',
-                  border: '1px solid rgb(52, 52, 52)',
-                  borderRadius: '16px 16px 16px 16px',
-                }}
-              >
-                <CardItem/>
-              </Box>
-
-              <Box
-                sx={{
-                  padding: '16px',
-                  border: '1px solid rgb(52, 52, 52)',
-                  borderRadius: '16px 16px 16px 16px',
-                }}
-              >
-                <CardItem/>
-              </Box>
-        
-
+</Box>
+          )))
+          :(
+            <p>skelton</p>
+          )}
+            
 
         </Box>
-      </>
-   
+
+<Box sx={{mt:'16px'}}>kk</Box>
+
+</Box>
+    
   )}
   
   export default Main;
