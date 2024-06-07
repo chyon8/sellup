@@ -15,10 +15,10 @@ const theme = createTheme({
     fontWeightMedium: typography.weight.medium,
     fontWeightBold: typography.weight.bold,
     h1: {
-      color: 'rgb(255, 255, 255)',
+      color: 'rgb(0, 0, 0)',
       fontFamily: 'Pretendard',
       fontWeight: typography.weight.bold,
-      fontSize: '30px',
+      fontSize: '25px',
       lineHeight: -1,
       letterSpacing: 0,
       textAlign: 'left',
@@ -39,10 +39,11 @@ const theme = createTheme({
       //default: 'rgb(0, 0, 0)',
     },
     text: {
-      primary: 'rgb(255,255,255)',
+      //primary: 'rgb(255,255,255)',
+      primary: 'rgb(0, 0, 0)'
     },
     primary: {
-      main: 'rgb(255,255,255)',
+      main: 'rgb(0,0,0)',
     },
     white: {
       main: 'rgb(255,255,255)',
@@ -69,7 +70,7 @@ const theme = createTheme({
         root: {
           borderRadius: 20,
           '&:hover': {
-            backgroundColor: 'rgb(121, 53, 208)',
+            backgroundColor: 'rgb(255, 255, 255)',
           },
         },
       },
@@ -130,7 +131,14 @@ const theme = createTheme({
         },
       },
     },
-
+    
+    MuiPagination: {
+      styleOverrides: {
+        root: {
+       justifyContent:'center'
+        },
+      },
+    },
   
 
     MuiContainer: {

@@ -2,7 +2,7 @@
 
 import { Container,Box } from "@mui/material";
 import Main from "@/components/Main";
-import LeftMenu from "@/components/LeftMenu";
+
 
 const Home = () => {
 
@@ -10,12 +10,12 @@ const Home = () => {
   return (
     <Container>
      
-     <Box sx={{display:'flex'}}>
-    <LeftMenu/>
+     <Box >
+   
      <Main/>
-
      </Box>
      
+  
 
     </Container>
   );

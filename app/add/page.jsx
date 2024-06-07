@@ -21,7 +21,7 @@ const userId=(user._id.toString())
   <iframe data-tally-src={`https://tally.so/embed/wgA4ql?user=${userId}alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`} loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="사이드 프로젝트 등록하기"></iframe>
     
      </Box>
-     
+
 
     </Container>
   );

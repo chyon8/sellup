@@ -1,7 +1,6 @@
 import Product from "@/models/Product";
 import { NextResponse } from "next/server";
 
-
 export const dynamic = 'force-dynamic';
 
 export async function GET(req) {
@@ -15,6 +14,7 @@ export async function GET(req) {
 
 
     const product = await Product.find().sort({ createdAt: 'desc' })
+    .populate('user')
       .skip((page - 1) * limit)
       .limit(limit);
 
