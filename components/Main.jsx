@@ -11,6 +11,14 @@ function Main() {
 
   const [data,setData]=useState(null)
   const [currentPage, setCurrentPage] = useState(1);
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  const handleDataFromFilter = (data) => {
+   
+    setData(data)
+   
+  };
 
 
 
@@ -18,6 +26,7 @@ function Main() {
     setCurrentPage(newPage);
  
 };
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,15 +41,30 @@ function Main() {
 
     fetchData();
   }, [currentPage]);
-  
+
+
+  const openFilter = () =>{
+    setIsOpen(!isOpen)
+  }
+
 
 
     return (
 
     
   <Box>
+    <Button onClick={openFilter} sx={{mb:'24px'}} variant="outlined">
+     {isOpen ? "필터 닫기" : "필터 열기"} 
+      </Button>
+{isOpen && ( 
 
-    <Filter/>
+<Filter onDataReceived={handleDataFromFilter}/>
+)}
+
+
+   
+
+
         <Box
           sx={{
             display: 'grid',
@@ -50,6 +74,7 @@ function Main() {
             width: { xs: '100%'},
           }}
         >
+          
           {data?.product? (data?.product.map((products,index)=>(
   <Box
   key={index}
@@ -72,7 +97,8 @@ function Main() {
           :(
             <p>skelton</p>
           )}
-            
+
+          {data?.totalCount === 0 && (<Typography>No Result Found</Typography>)} 
 
         </Box>
 
