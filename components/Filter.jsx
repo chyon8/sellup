@@ -48,39 +48,43 @@ export default function Filter({onDataReceived}) {
   return (
     <Box sx={{ mb: '40px' }}>
       <Box sx={{ mb: '30px' }}>
-        <Typography variant="h1" sx={{ mb: '10px' }}>종류</Typography>
+        <Typography fontSize='15px' fontWeight='600' sx={{ mb: '10px',color:'#FFFF' }}>종류</Typography>
         {fileter_type.map((type, index) => (
           <Button
             onClick={() => handleTypeClick(type)}
-            sx={{ padding: '4px', mt: '5px', mr: '5px', bgcolor: typeValue?.includes(type) ? 'grey' : 'white' }}
+            sx={{ pt: '8px',pr:'20px',pb:'8px',pl:'20px', mt: '10px', mr: '10px', bgcolor: typeValue?.includes(type) ? '#00FF66' : '#252525' }}
             key={index}
             size="small"
-            variant="outlined"
+          
           >
-            <Typography>{type}</Typography>
+            <Typography fontSize='14px' fontWeight='700' sx={{color:typeValue?.includes(type) ? '#0A0A0A': '#F0F0F0'}}>{type}</Typography>
           </Button>
         ))}
       </Box>
 
       <Box>
-        <Typography variant="h1" sx={{ mb: '10px' }}>카테고리</Typography>
+        <Typography fontWeight='600' fontSize='15px' sx={{ mb: '10px',color:'#FFFF' }}>카테고리</Typography>
         {fileter_category.map((cat, index) => (
           <Button
             onClick={() => handleCategoryClick(cat)}
-            sx={{ padding: '4px', mt: '5px', mr: '5px', bgcolor: catValue?.includes(cat) ? 'grey' : 'white' }}
+            sx={{ pt: '8px',pr:'20px',pb:'8px',pl:'20px', mt: '10px', mr: '10px', bgcolor: catValue?.includes(cat) ? '#00FF66' : '#252525' }}
             key={index}
             size="small"
-            variant="outlined"
+           
           >
-            <Typography>{cat}</Typography>
+            <Typography fontSize='14px' fontWeight='700' sx={{color: catValue?.includes(cat) ? '#0A0A0A' :'#F0F0F0'}}>{cat}</Typography>
           </Button>
         ))}
       </Box>
 
-      <Box sx={{ mt: '40px' }}>
-        <Button onClick={handleSearchClick} variant="outlined">찾기</Button>
+      <Box sx={{ mt: '35px' }}>
+        <Button sx={{ bgcolor:'#00FF66'}} onClick={handleSearchClick} >
+       
+<Typography fontWeight='700' fontSize='14px' sx={{color:'#0A0A0A'}} >찾기</Typography>
+        </Button>
 
       </Box>
     </Box>
   );
 }
+

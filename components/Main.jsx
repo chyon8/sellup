@@ -52,9 +52,10 @@ function Main() {
     return (
 
     
-  <Box>
-    <Button onClick={openFilter} sx={{mb:'24px'}} variant="outlined">
-     {isOpen ? "필터 닫기" : "필터 열기"} 
+  <Box sx={{mb:'30px'}}>
+    <Typography sx={{color:'#F0F0F0'}} fontWeight='600' fontSize='34px'>프로젝트</Typography>
+    <Button onClick={openFilter} sx={{mb:'24px',bgcolor:'#00FF66',mt:'15px'}} >
+     {isOpen ? <Typography fontWeight='700' fontSize='14px' sx={{color:'#0A0A0A'}} >필터 닫기</Typography> : <Typography fontSize='14px' fontWeight='700' sx={{color:'#0A0A0A'}}>필터 열기</Typography>} 
       </Button>
 {isOpen && ( 
 
@@ -98,7 +99,7 @@ function Main() {
             <p>skelton</p>
           )}
 
-          {data?.totalCount === 0 && (<Typography>No Result Found</Typography>)} 
+          {data?.totalCount === 0 && (<Typography sx={{color:'#FFFFFFF'}}>No Result Found</Typography>)} 
 
         </Box>
 

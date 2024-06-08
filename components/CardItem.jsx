@@ -31,6 +31,7 @@ function CardItem({data}) {
               key={data._id}
               sx={{
                 display: 'flex',
+                bgcolor:'#191919',
                 flexDirection: 'column',
                 height: '200px',         
                 width: '100%',
@@ -43,8 +44,7 @@ function CardItem({data}) {
               <CardContent sx={{ padding: '0' }}>
                 <Box
                   sx={{
-                    display: 'flex',
-                
+                    display: 'flex',    
                     whiteSpace: 'nowrap',
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',

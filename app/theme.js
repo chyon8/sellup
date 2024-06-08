@@ -9,13 +9,14 @@ import { typography } from './themeValue.js';
 const theme = createTheme({
   typography: {
     fontFamily: 'Pretendard',
-    fontSize: 11,
+    fontSize: 12,
+    color:'#FFFFFF',
     fontWeightLight: typography.weight.light,
     fontWeightRegular: typography.weight.regular,
     fontWeightMedium: typography.weight.medium,
     fontWeightBold: typography.weight.bold,
     h1: {
-      color: 'rgb(0, 0, 0)',
+      color: '#FFFFFF',
       fontFamily: 'Pretendard',
       fontWeight: typography.weight.bold,
       fontSize: '25px',
@@ -35,15 +36,15 @@ const theme = createTheme({
   },
   palette: {
     background: {
-      default: 'rgb(14, 14, 14)',
+      default: '#191919',
       //default: 'rgb(0, 0, 0)',
     },
     text: {
-      //primary: 'rgb(255,255,255)',
-      primary: 'rgb(0, 0, 0)'
+      primary: 'rgb(255,255,255)',
+      //primary: 'white'
     },
     primary: {
-      main: 'rgb(0,0,0)',
+      main: '#FFFFFF',
     },
     white: {
       main: 'rgb(255,255,255)',
@@ -68,9 +69,14 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
+          color:"#FFFFFF",
+          paddingTop:'8px'
+          ,paddingRight:'20px'
+          ,paddingBottom:'8px',
+          paddingLeft:'20px',
           borderRadius: 20,
           '&:hover': {
-            backgroundColor: 'rgb(255, 255, 255)',
+            backgroundColor: '#00FF66',
           },
         },
       },
@@ -144,11 +150,15 @@ const theme = createTheme({
     MuiContainer: {
       styleOverrides: {
         root: {
-          maxWidth: '1200px',
+          maxWidth: '1350px',
+         
+          //marginLeft:'35px',
+          //marginRight:'35px',
+       
 
           '@media (min-width:0px)': {
-            paddingLeft: '0px',
-            paddingRight: '0px',
+            paddingLeft: '35px',
+            paddingRight: '35px',
           },
         },
       },
