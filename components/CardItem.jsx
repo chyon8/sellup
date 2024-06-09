@@ -5,11 +5,11 @@ import { Box,Typography,Card,CardActions,CardContent,Chip,Avatar } from "@mui/ma
 import Link from "next/link";
 import { typography } from "@/app/themeValue";
 import TimeSincePost from "./TImeSincePost";
-
+import { useSession  } from "next-auth/react";
 
 function CardItem({data}) {
 
-
+  const { data: session } = useSession();
 
   
     return  (
@@ -91,7 +91,7 @@ function CardItem({data}) {
                 <Box sx={{mr:'5px'}}>
                     <Avatar
                       style={{ width: '28px', height: '28px', borderRadius: '50%' }}
-                      src={data.user.image}
+                      src={session?.user.image}
                       alt="user"
                     />
                   </Box>

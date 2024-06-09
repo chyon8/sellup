@@ -1,11 +1,11 @@
-
-
-import { useParams } from 'next/navigation';
-import BASE_URL from '@/app/config';
-import { Typography,Box,Container } from '@mui/material';
+"use client"
+import {Container } from '@mui/material';
 import ProductDetail from '@/components/ProductDetail';
 
+
 const ProductPage = () => {
+
+
 
 
   return (

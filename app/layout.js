@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <NextAuthProvider>
           
 <head>
-<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="shortcut icon" href="images/favicon.jpg" />
 <script async src="https://tally.so/widgets/embed.js"></script>
 
 
