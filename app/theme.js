@@ -10,7 +10,7 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Pretendard',
     fontSize: 12,
-    color:'#FFFFFF',
+    color:'rgb(255,255,255)',
     fontWeightLight: typography.weight.light,
     fontWeightRegular: typography.weight.regular,
     fontWeightMedium: typography.weight.medium,
@@ -23,6 +23,20 @@ const theme = createTheme({
       lineHeight: -1,
       letterSpacing: 0,
       textAlign: 'left',
+    },
+    question:{
+      color: '#FFFFFF',
+      fontSize:'22px',
+      display:'block'
+     
+  
+      
+    },
+    answer:{
+      color:'#DDDDDD',
+      fontSize:'14px',
+          display:'block'
+   
     },
     timeSincePost: {
       color: 'rgb(168, 168, 168)',
@@ -40,7 +54,7 @@ const theme = createTheme({
       //default: 'rgb(0, 0, 0)',
     },
     text: {
-      primary: 'rgb(255,255,255)',
+      primary: '#FFFFFF',
       //primary: 'white'
     },
     primary: {
@@ -70,12 +84,15 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color:"#FFFFFF",
-          paddingTop:'8px'
+          backgroundColor:'#252525',
+          textTransform: 'none',
+          paddingTop:'10px'
           ,paddingRight:'20px'
-          ,paddingBottom:'8px',
+          ,paddingBottom:'10px',
           paddingLeft:'20px',
           borderRadius: 20,
           '&:hover': {
+            color:'#0A0A0A',
             backgroundColor: '#00FF66',
           },
         },

@@ -69,7 +69,7 @@ function Main() {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { sm: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' },
+            gridTemplateColumns: { sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
             gap: 2,
             mt: 2,
             width: { xs: '100%'},
@@ -84,7 +84,8 @@ function Main() {
     padding: '16px',
     border: '1px solid rgb(52, 52, 52)',
     borderRadius: '16px 16px 16px 16px',
-    width:{lg:'300px'}
+    width:{lg:'300px'},
+    bgcolor:'#191919',
   }}
 >
   <CardItem 

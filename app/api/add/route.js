@@ -41,13 +41,29 @@ export async function POST(req) {
           toDb[obj.label] = obj.options.filter(multipleQ).map(item=> item.text)
   
         }
+        else if(obj.type == "FILE_UPLOAD"){
+
+          function fileUpload(elem){
+  
+            for (var i = 0; i < obj.value.length; i++) {
+              if(elem.id==obj.value[i].id){
+                return true
+         
+              }
+            }
+       
+          }      
+          toDb[obj.label] = obj.value.filter(fileUpload).map(item=> item.url)
+  
+
+        }
         else {
           toDb[obj.label] = obj.value;
         }
 
     });
 
-  console.log(toDb)
+ 
  await Product.create(toDb)
 
      

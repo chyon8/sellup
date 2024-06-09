@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         nav: "#191919",
         //page: "#00000", //배경화면
-        page:"#0A0A0A"
+        page:"#0A0A0A",
+   
       
       
       },

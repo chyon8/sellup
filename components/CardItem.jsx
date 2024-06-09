@@ -1,30 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Box,Typography,Card,CardActions,CardContent,Chip } from "@mui/material";
+import { Box,Typography,Card,CardActions,CardContent,Chip,Avatar } from "@mui/material";
 import Link from "next/link";
 import { typography } from "@/app/themeValue";
 import TimeSincePost from "./TImeSincePost";
 
+
 function CardItem({data}) {
 
- 
-  
+
+
   
     return  (
   <Box>
-
-{/*
-   <p>제목:{data.title}</p>
-   <p>카테고리:{data.category}</p>
-   <p>설명:{data.description}</p>
-   <p>종류:{data.type}</p>
-   <p>수익여부:{data.revenue}</p>
-   <p>수익설명:{data.revenueDesc}</p>
-   <p>판매 이유:{data.whysell}</p>
-   <p>가격:{data.price}</p>
-   <p>최소 가격:{data.minPrice}</p>
-   */}
-
 
 
    <Card
@@ -33,15 +22,53 @@ function CardItem({data}) {
                 display: 'flex',
                 bgcolor:'#191919',
                 flexDirection: 'column',
-                height: '200px',         
+                    
                 width: '100%',
                 margin: '0 auto',
                 maxWidth: '100%',
                 boxShadow:'none'
               }}
             >
+
            
               <CardContent sx={{ padding: '0' }}>
+
+              <Box mb={2}>
+                      {data.category.map((cat,index) =>(
+                         <Chip sx={{mr:'3px'}} key={index} size="small" variant="outlined" label={cat}/>
+                      ))}
+                    
+                  
+                    </Box>
+
+              <Link style={{ textDecorationLine: 'none', color: 'inherit' }} 
+               href={`/product/${data._id}`}>
+        <Box
+          sx={{
+            width: '100%',
+            height: '200px',   
+            top: 0,
+            left: 0,
+         
+            background: 'linear-gradient(180.00deg, rgba(25, 25, 25, 0) 49.967%,rgba(25, 25, 25, 0.7) 100%)',
+          }}
+        >
+        <img
+          style={{  
+            borderRadius:'10px',
+            width: '100%',
+            height: '100%',
+            top: 0,
+            left: 0,
+          }}
+          src={data?.thumbnail && data.thumbnail.length > 0 ? data.thumbnail : "https://i.ibb.co/Bc10XpB/sellup.jpg"}
+         
+   
+          alt='product'
+        />
+</Box>
+      
+      </Link>
                 <Box
                   sx={{
                     display: 'flex',    
@@ -56,16 +83,20 @@ function CardItem({data}) {
 
                   <Box display="grid">
 
-                    <Box mb={2}>
-                      {data.category.map((cat,index) =>(
-                         <Chip sx={{mr:'3px'}} key={index} size="small" variant="outlined" label={cat}/>
-                      ))}
-                    
-                  
-                    </Box>
 
-                    <Box display="flex">
+
+                    <Box className="user" sx={{mt:'14px'}}
+                     display="flex">
+
+                <Box sx={{mr:'5px'}}>
+                    <Avatar
+                      style={{ width: '28px', height: '28px', borderRadius: '50%' }}
+                      src={data.user.image}
+                      alt="user"
+                    />
+                  </Box>
                       <Typography
+                      fontWeight='500'
                         variant="body1"
                         sx={{
                           alignContent: 'center',
@@ -79,7 +110,9 @@ function CardItem({data}) {
                         <Typography>{data.user.name}</Typography>
                       </Typography>
 
+
                       <Typography
+                      fontWeight='600'
                         sx={{
                           color: 'rgb(168, 168, 168)',
                           ml: '4px',
@@ -95,15 +128,15 @@ function CardItem({data}) {
                 </Box>
 
                 <Link href={`/product/${data._id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
-                  <Box sx={{ width: '234px', height: '74px' }}>
+                  <Box sx={{ width: '234px' }}>
                     <Typography
                      
-                      fontWeight={typography.weight.bold}
-                      fontSize={typography.size.lg}
+                      fontWeight="700"
+                      fontSize="18px"
                       component="div"
                       sx={{
                         textAlign: 'left',
-                        mt: '13px',
+                        mt: '15px',
                         whiteSpace: 'nowrap',
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
@@ -131,32 +164,32 @@ function CardItem({data}) {
                   </Box>
                 </Link>
               </CardContent>
-              <CardActions disableSpacing 
-              sx={{ mt: 'auto', width:'auto',padding:0 }}>
+              <CardActions  
+              sx={{  width:'auto',padding:0 }}>
                 <Box
                   sx={{
                     display: 'flex',
                     justifyContent:'space-between',
                     width:'100%',
-                    borderTop:'1px solid',
+                    borderTop:'1px solid #333333',
 
   
                    }}>
                 
-                <Box sx={{ mt:'4px', p:1, flex:1, display:'grid',gap:2,textAlign:'center'}}>
+                <Box sx={{ mt:'10px', p:1, flex:1, display:'grid',gap:2,textAlign:'center'}}>
                 <Typography>종류</Typography>
                 <Typography>{data.type.join(', ')}</Typography>
 
               
                 </Box>
 
-                <Box sx={{mt:'4px', p:1,flex:1, display:'grid', gap:2, textAlign:'center'}}>
+                <Box sx={{mt:'10px', p:1,flex:1, display:'grid', gap:2, textAlign:'center'}}>
                 <Typography>판매 가격</Typography>
                   <Typography>{data.price? data.price + "원" : "합의 가능"}</Typography>
              
                 </Box>
 
-                <Box sx={{mt:'4px',p:1,flex:1, display:'grid',gap:2,textAlign:'center'}}>
+                <Box sx={{mt:'10px',p:1,flex:1, display:'grid',gap:2,textAlign:'center'}}>
                 <Typography>수익</Typography>
                   <Typography>{data.revenue}</Typography>
                  

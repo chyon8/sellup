@@ -13,6 +13,12 @@ const productSchema = new Schema(
       ref: 'User',
       required: true,
     },
+    thumbnail:{
+      type:[String]
+    },
+    productImages:{
+      type:[String]
+    },
 
     title: {
       type: String,  
