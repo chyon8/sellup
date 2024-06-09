@@ -45,15 +45,15 @@ export async function POST(req) {
 
           function fileUpload(elem){
   
-            for (var i = 0; i < obj.value.length; i++) {
-              if(elem.id==obj.value[i].id){
+            for (var i = 0; i < obj.value?.length; i++) {
+              if(elem.id==obj.value[i]?.id){
                 return true
          
               }
             }
        
           }      
-          toDb[obj.label] = obj.value.filter(fileUpload).map(item=> item.url)
+          toDb[obj.label] = obj.value?.filter(fileUpload).map(item=> item.url)
   
 
         }
