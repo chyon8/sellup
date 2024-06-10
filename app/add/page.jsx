@@ -5,6 +5,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import User from '@/models/User'; 
 
+
 const Home = async () => {
 
   const session = await getServerSession();
