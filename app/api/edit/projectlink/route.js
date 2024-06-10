@@ -4,11 +4,7 @@ import { NextResponse } from "next/server";
 
 export const dynamic = 'force-dynamic';
 
-export const config = {
-  api: {
-    bodyParser: false
-  }
-};
+
 
 export async function POST(req) {
 
