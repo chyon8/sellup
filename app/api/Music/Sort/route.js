@@ -20,6 +20,7 @@ export async function GET(req) {
     if (genre) {
       filters.genre = genre;
     }
+    
  
 
 
