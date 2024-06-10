@@ -33,7 +33,8 @@ const productSchema = new Schema(
 
     
     thumbnail:{
-      type:[String]
+      type:String,
+      default:'https://i.ibb.co/Bc10XpB/sellup.jpg'
     },
     productImages:{
       type:[String]
