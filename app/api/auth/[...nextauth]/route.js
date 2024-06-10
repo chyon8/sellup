@@ -20,7 +20,8 @@ const authOptions = {
     async signIn({ user, account }) {
 
       if (account.provider === "google") {
-        const { name, email } = user;
+        const { name, email,image } = user;
+        console.log(user)
         try {
   
           const userExists = await User.findOne({ email });
@@ -34,6 +35,7 @@ const authOptions = {
               body: JSON.stringify({
                 name,
                 email,
+                image
               }),
             });
 

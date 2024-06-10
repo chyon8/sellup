@@ -1,8 +1,4 @@
 
-
-
-
-
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
@@ -14,6 +10,8 @@ import ProductDescBody from './ProductDescBody';
 import ProductImage from './ProductImage';
 import ProductThumbnail from './ProductThumbnail';
 import ProductPrice from './ProductPrice';
+import ProductDetailLeft from './ProductDetailLeft';
+
 
 const ProductDetail = () => {
   const router = useParams();
@@ -47,10 +45,12 @@ const ProductDetail = () => {
   }
 
   return (
-    <Box display="grid" sx={{ border: '1px solid #777777', borderRadius: '20px', padding: '25px' }}>
-   
-      <ProductThumbnail product={product}/>
+  
 
+    <Box className="productDetail"  sx={{ display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'},border: '1px solid #222222', borderRadius: '20px', padding: '25px' }}>
+
+      <Box className="productDetailLeft" sx={{flex:2}}>
+      <ProductThumbnail product={product}/>
       <Box className="index" sx={{
         zIndex: 1, position: 'sticky', 
         //top: 0, 
@@ -65,6 +65,11 @@ const ProductDetail = () => {
       </Box>
 
 
+      <Box className="price" sx={{ mt: '15px', borderRadius: '20px', bgcolor: '#252525', padding: '25px' }}>
+    <ProductPrice product={product}/>
+      </Box>
+
+    
       <Box className="projectDesc" sx={{ mt: '15px', borderRadius: '20px', bgcolor: '#252525', padding: '25px' }}>
       <ProductDescBody product={product}/>
       </Box>
@@ -72,11 +77,21 @@ const ProductDetail = () => {
       <Box className="projectImg" sx={{ mt: '15px', borderRadius: '20px', bgcolor: '#252525', padding: '25px' }}>
      <ProductImage product={product}/>
      </Box>
+     </Box>
 
-      <Box className="price" sx={{ mt: '15px', borderRadius: '20px', bgcolor: '#252525', padding: '25px' }}>
-    <ProductPrice product={product}/>
-      </Box>
+
+
+     <Box  className="productRight" display="grid" sx={{flex:1, borderRadius: '20px', mt:'25px', flex:1,
+    mb:'15px',ml:{lg:'30px'}, height:'fit-content' }}>
+<ProductDetailLeft/>
+</Box>
+
+
     </Box>
+
+
+
+
   );
 };
 

@@ -9,6 +9,7 @@ import { useSession  } from "next-auth/react";
 
 function CardItem({data}) {
 
+  console.log(data.user)
   const { data: session } = useSession();
 
   
@@ -91,7 +92,7 @@ function CardItem({data}) {
                 <Box sx={{mr:'5px'}}>
                     <Avatar
                       style={{ width: '28px', height: '28px', borderRadius: '50%' }}
-                      src={session?.user.image}
+                      src={data?.user.image}
                       alt="user"
                     />
                   </Box>
