@@ -39,9 +39,6 @@ const ProductDetailLeft = () => {
     fetchData();
   }, [productId]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
 
   if (!product) {
     return <p>Product not found</p>;

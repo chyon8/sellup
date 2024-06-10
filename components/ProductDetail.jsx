@@ -12,6 +12,8 @@ import ProductThumbnail from './ProductThumbnail';
 import ProductPrice from './ProductPrice';
 import ProductDetailLeft from './ProductDetailLeft';
 import TimeSincePost from './TImeSincePost';
+import SkeletonDetail from './SkeletonDetail';
+import SkeletonDetailSocial from './SkeletonDetailSocial';
 
 const ProductDetail = () => {
   const router = useParams();
@@ -37,7 +39,15 @@ const ProductDetail = () => {
   }, [productId]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <Box sx={{ display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'}}}>
+      
+    
+    <SkeletonDetail/>
+   
+
+    <SkeletonDetailSocial/>
+    </Box>)
   }
 
   if (!product) {
