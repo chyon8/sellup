@@ -16,7 +16,7 @@ const ProductThumbnail = ({product}) => {
         background: 'linear-gradient(180.00deg, rgba(25, 25, 25, 0) 49.967%,rgba(25, 25, 25, 0.7) 100%)'
       }}>
         <img style={{ borderRadius: '20px', width: '100%', height: '100%' }}
-          src={product?.thumbnail && product.thumbnail.length > 0 ? product.thumbnail : "https://i.ibb.co/Bc10XpB/sellup.jpg"}
+          src={product?.thumbnail }
           alt='product'
         />
       </Box>

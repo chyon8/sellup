@@ -12,7 +12,7 @@ const SkeletonDetail = () => {
      <Box>
     
 
-    <Skeleton variant="rounded" sx={{flex:2, borderRadius:'20px',width:'700px',height: '600px'}} />
+    <Skeleton variant="rounded" sx={{flex:2, borderRadius:'20px',width:{lg:'700px'},height: '600px'}} />
 
 
  

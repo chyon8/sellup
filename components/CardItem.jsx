@@ -9,7 +9,7 @@ import { useSession  } from "next-auth/react";
 
 function CardItem({data}) {
 
-
+console.log(data)
   const { data: session } = useSession();
 
   

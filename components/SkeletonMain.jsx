@@ -14,7 +14,7 @@ const SkeletonMain = () => {
         sx={{
             display:'grid',
           gridTemplateColumns: { sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
-          gap: 2,
+          gap: {sm:2,md:2,lg:6},
           mt: 2,
 
          
