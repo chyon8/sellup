@@ -38,7 +38,7 @@ export default function Navbar() {
             </Link>
 
             <a href={`/add`} style={{textDecoration:'none',color:'inherit'}}>
-<Button sx={{bgcolor:'#252525',ml:'10px', borderRadius:'10px',pt:'10px',pr:'20px',pb:'10px',pl:'20px'}} ><Typography fontWeight='700' fontSize='14px'>등록하기</Typography></Button>
+<Button sx={{bgcolor:'#252525',mt:'2px',ml:'10px', borderRadius:'10px',pt:'10px',pr:'20px',pb:'10px',pl:'20px'}} ><Typography fontWeight='700' fontSize='14px'>등록하기</Typography></Button>
 </a>
 
 </Box>
@@ -47,13 +47,10 @@ export default function Navbar() {
       ) : (
 
     
-        <button
-          onClick={() => signIn("google")}
-
-          className="text-white px-4 py-2 border border-gray-800 rounded-xl"
-        >
-          Sign In
-        </button>
+        <Button sx={{ color:'#0A0A0A', backgroundColor: '#00FF66',}}
+        onClick={() => signIn("google")} 
+            ><Typography >로그인</Typography>
+          </Button>
       
 
 

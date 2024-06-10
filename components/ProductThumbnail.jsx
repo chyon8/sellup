@@ -11,6 +11,7 @@ const ProductThumbnail = ({product}) => {
 
   return (
     <Box className="productImg" sx={{
+  
         width: '100%', height: '350px',
         background: 'linear-gradient(180.00deg, rgba(25, 25, 25, 0) 49.967%,rgba(25, 25, 25, 0.7) 100%)'
       }}>

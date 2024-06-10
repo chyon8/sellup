@@ -15,10 +15,13 @@ function ProductPrice({product}) {
         <Box>
         
         <Typography sx={{ mb: '14px' }} variant="question">가격</Typography>
+
         {product.price ?
         <Box sx={{display:'flex'}}><LocalOfferIcon sx={{mr:'6px',color:'#FFFFFF'}} />
         <Typography variant='answer' sx={{mt:'3px'}}>{product.price.toLocaleString()}원</Typography></Box> 
-        : <Typography  variant='answer'>합의 가능</Typography>}
+
+        :  <Box sx={{display:'flex'}}><LocalOfferIcon sx={{mr:'6px',color:'#FFFFFF'}} />
+        <Typography  variant='answer'>합의 가능</Typography></Box>}
       </Box>
     
   )}

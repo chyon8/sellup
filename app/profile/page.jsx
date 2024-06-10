@@ -2,9 +2,8 @@
 
 import UserInfo from "@/components/UserInfo";
 
-//import User from '@/models/User'; // Adjust the path accordingly
 import { signOut,useSession  } from "next-auth/react";
-
+import { Button,Typography } from "@mui/material";
 
 
 const getUserProfile = async () => {
@@ -32,14 +31,14 @@ const Profile = () => {
 
 <UserInfo/>
 
-<a className="flex text-lg ml-4 text-slate-600 hover:text-yellow-200 mb-4" href={"access"}>Request Access</a>
-
 
 { status !== 'unauthenticated' && (
-<button
-className="text-white ml-3 mt-3 px-4 py-2 border border-gray-800 rounded-xl"
-onClick={() => signOut()}>Sign Out
-</button>
+
+<Button sx={{ color:'#0A0A0A', backgroundColor: '#00FF66',}}
+onClick={() => signOut()} 
+    ><Typography >로그아웃</Typography>
+  </Button>
+
 )}    
      </div>
 

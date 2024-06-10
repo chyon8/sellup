@@ -13,6 +13,25 @@ const productSchema = new Schema(
       ref: 'User',
       required: true,
     },
+
+    projectLink:{
+      type:String
+    },
+    contact:{
+      type:String
+    },
+    social1:{
+      type:String
+    },
+    social2:{
+      type:String
+    },
+    social3:{
+      type:String
+    },
+
+
+    
     thumbnail:{
       type:[String]
     },

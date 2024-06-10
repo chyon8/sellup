@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import SignInBtn from "./SignInBtn";
-
+import { Container,Typography,Box } from "@mui/material";
 import { useSession } from "next-auth/react";
 
 export default function UserInfo() {
@@ -10,25 +10,24 @@ export default function UserInfo() {
 
   if (status === "authenticated") {
     return (
-      <div className="shadow-xl p-5 rounded-md flex flex-col gap-3 bg-black-100">
+      <Container>
         <Image
           className="rounded-full"
           src={session?.user?.image}
           width={60}
           height={60}
+          alt="user"
         />
-        <div>
-          Name: <span className="font-bold">{session?.user?.name}</span>
-        </div>
-        <div>
-          Email: <span className="font-bold">{session?.user?.email}</span>
+        <Box sx={{disaply:'grid',gap:3}}>
+        <Typography variant="answer" > {session?.user?.name}</Typography>
+      <Typography variant="answer" >{session?.user?.email}</Typography>
   
-        </div>
+        </Box>
       
-      </div>
+      </Container>
      
     );
   } else {
-    return <SignInBtn/>;
+    return ;
   }
 }

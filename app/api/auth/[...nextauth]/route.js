@@ -21,7 +21,7 @@ const authOptions = {
 
       if (account.provider === "google") {
         const { name, email,image } = user;
-        console.log(user)
+
         try {
   
           const userExists = await User.findOne({ email });
