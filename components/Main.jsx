@@ -100,7 +100,7 @@ function Main() {
             <p>skelton</p>
           )}
 
-          {data?.totalCount === 0 && (<Typography sx={{color:'#FFFFFFF'}}>No Result Found</Typography>)} 
+          {data?.totalCount === 0 && (<Typography variant="answer">찾으시는 프로젝트가 없어요..</Typography>)} 
 
         </Box>
 
