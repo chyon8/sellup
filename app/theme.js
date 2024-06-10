@@ -173,7 +173,7 @@ const theme = createTheme({
           //marginRight:'35px',
        
 
-          '@media (min-width:0px)': {
+          '@media (min-width:600px)': {
             paddingLeft: '35px',
             paddingRight: '35px',
           },

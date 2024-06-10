@@ -50,7 +50,7 @@ const ProductDetail = () => {
 
 <ProductThumbnail product={product}/>
 
-    <Box className="productDetail"  sx={{ display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'},border: '1px solid #222222', borderRadius: '20px', padding: '25px',borderTop:'0px' }}>
+    <Box className="productDetail"  sx={{ display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'},border: '1px solid #222222', borderRadius: '20px', padding: {xs:'0px',sm:'25px',md:'25px',lg:'25px'},borderTop:'0px' }}>
 
       <Box className="productDetailLeft" sx={{flex:2}}>
 
