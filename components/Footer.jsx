@@ -18,7 +18,7 @@ boxShadow: '5px 5px 10px 0px #000000',mb:'28px'
 
 <Box sx={{display:'flex',justifyContent:'center'}}>
 <img src="https://i.ibb.co/Bc10XpB/sellup.jpg" alt="logo" style={{width:'30px',height:'30px'}} />
-<Typography textAlign='center' fontSize='20px' sx={{ mb: '14px',color:'#FFFFFF',ml:'10px',mt:'7px' }}>셀업</Typography>
+<Typography fontSize='15px' sx={{ mb: '14px',color:'#FFFFFF',mr:"25px",mt:'7px' }}>셀업</Typography>
 </Box>
 
 

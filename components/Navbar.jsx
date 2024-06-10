@@ -9,9 +9,9 @@ export default function Navbar() {
   const { status,data: session } = useSession();
 
   return (
-    <Container>
+    <Box>
     <Box sx={{ bgcolor:'#191919',border:'1px solid #252525', boxShadow: '5px 6px 20px #000000',height:'auto',
-      borderRadius:'15px',paddingTop:'15px',paddingRight:'35px',paddingBottom:'15px',paddingLeft:'35px', mt:'35px',mb:'35px'}} 
+      borderRadius:'15px',paddingTop:'15px',paddingRight:'15px',paddingBottom:'15px',paddingLeft:'35px',mb:'35px'}} 
     className="  flex justify-between items-center shadow-md bg-page">
     
 
@@ -19,7 +19,7 @@ export default function Navbar() {
     <img src="https://i.ibb.co/Bc10XpB/sellup.jpg" alt="logo" style={{width:'30px',height:'30px'}} />
 
       <Link className="font-bold text-lg" href={"/"} style={{textDecoration:'none',color:'white'}}>
-       <Typography fontWeight='500' fontSize='20px'sx={{mt:'7px',ml:'4px'}} >셀업</Typography> 
+       <Typography fontWeight='500' fontSize='18px'sx={{mt:'7px',ml:'4px'}} >셀업</Typography> 
       </Link>
       </Box>
 
@@ -63,6 +63,6 @@ export default function Navbar() {
            
       )}
     </Box>
-    </Container>
+    </Box>
   );
 }

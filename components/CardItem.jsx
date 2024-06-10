@@ -100,11 +100,12 @@ function CardItem({data}) {
                       fontWeight='500'
                         variant="body1"
                         sx={{
-                          alignContent: 'center',
+                          //alignContent: 'center',
                           maxWidth: '100px',
                           overflow: 'hidden',
                           textOverflow: 'ellipsis',
                           whiteSpace: 'nowrap',
+                          mt:'7px'
                         }}
                       >
                     
@@ -113,12 +114,13 @@ function CardItem({data}) {
 
 
                       <Typography
+                      fontSize="11px"
                       fontWeight='600'
                         sx={{
                           color: 'rgb(168, 168, 168)',
                           ml: '4px',
                           textAlign: 'left',
-                          alignContent: 'center',
+                       mt:'9px'
                         }}
                       >
                  <TimeSincePost createdAt={data.createdAt} /> 
