@@ -8,8 +8,6 @@ export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
   try {
-
-
     const body = await req.json();
 
     const toDb = {}
@@ -18,10 +16,9 @@ export async function POST(req) {
   
     tally.forEach(obj => {
   
-  
+
         if(obj.type=="MULTIPLE_CHOICE" || obj.type=="MULTI_SELECT"){
   
-
           function multipleQ(elem){
   
             for (var i = 0; i < obj.value.length; i++) {
@@ -30,7 +27,7 @@ export async function POST(req) {
          
               }
             }
-       
+      
           }      
           toDb[obj.label] = obj.options.filter(multipleQ).map(item=> item.text)
   

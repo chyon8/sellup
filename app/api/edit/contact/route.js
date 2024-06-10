@@ -4,15 +4,11 @@ import { NextResponse } from "next/server";
 
 export const dynamic = 'force-dynamic';
 
-
-
 export async function POST(req) {
-
 
   try {
     const body = await req.json();
     const { productId, name } = body;
-
 
     const result = await Product.findOneAndUpdate(
       { _id: productId },
