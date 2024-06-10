@@ -2,7 +2,7 @@
 
 import { Box, Typography, Button } from "@mui/material";
 import { useState,useEffect } from "react";
-
+import Link from "next/link";
 
 export default function Filter({onDataReceived}) {
   const [typeValue, setTypeValue] = useState([]);
@@ -77,11 +77,16 @@ export default function Filter({onDataReceived}) {
         ))}
       </Box>
 
-      <Box sx={{ mt: '35px' }}>
+      <Box sx={{ mt: '35px', gap:2, display:'flex' }}>
         <Button sx={{ bgcolor:'#00FF66'}} onClick={handleSearchClick} >
-       
-<Typography fontWeight='700' fontSize='14px' sx={{color:'#0A0A0A'}} >찾기</Typography>
+<Typography fontWeight='500' fontSize='14px' sx={{color:'#0A0A0A'}} >찾기</Typography>
         </Button>
+
+        <a style={{textDecoration:'none'}} href={'/'}>
+        <Button sx={{ bgcolor:'#00FF66'}}>
+        
+<Typography fontWeight='500' fontSize='14px' sx={{color:'#0A0A0A'}} >리셋</Typography>
+</Button></a> 
 
       </Box>
     </Box>

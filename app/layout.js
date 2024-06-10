@@ -5,7 +5,7 @@ import { NextAuthProvider } from "./Providers";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../app/theme'
-
+import Footer from '../components/Footer'
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -38,14 +38,16 @@ export default function RootLayout({ children }) {
        <Navbar />
  
        {children}
+       <Footer/>
        </ThemeProvider>
         </AppRouterCacheProvider>  
       
+   
     
     </div>
 
 
-{/* <p style={{textAlign:'center'}}>Footer</p> */}
+
 
 
    

@@ -81,7 +81,7 @@ const ProductDetail = () => {
         <Box sx={{display:'flex'}}>
         <Avatar src={product.user.image}/>
         <Typography sx={{mt:'13px',ml:'13px'}} variant='answer'>{product.user.name}</Typography>
-        <Typography fontWeight='600' sx={{color: 'rgb(168, 168, 168)', ml: '4px',textAlign: 'left',alignContent: 'center',}}>
+        <Typography fontSize='11px' fontWeight='600' sx={{color: 'rgb(168, 168, 168)', ml: '6px',textAlign: 'left',mt:'16px'}}>
                  <TimeSincePost createdAt={product.createdAt} /> 
                       </Typography>
         </Box>

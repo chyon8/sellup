@@ -34,9 +34,9 @@ function CardItem({data}) {
            
               <CardContent sx={{ padding: '0' }}>
 
-              <Box mb={2}>
+              <Box mb={2} sx={{display:'flex',gap:1}}>
                       {data.category.map((cat,index) =>(
-                         <Chip sx={{mr:'3px'}} key={index} size="small" variant="outlined" label={cat}/>
+                         <Chip sx={{mr:'3px',paddingTop:'3px',paddingBottom:'3px',paddingLeft:'3px',paddingRight:'3px'}} key={index} size="small" variant="outlined" label={cat}/>
                       ))}
                     
                   
