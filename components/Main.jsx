@@ -1,6 +1,6 @@
-"use client";
 
-import { Box,Typography,Button, Skeleton } from "@mui/material";
+
+import { Box,Typography,Button } from "@mui/material";
 import { useEffect,useState } from "react";
 import CardItem from "./CardItem";
 import BASE_URL from '../app/config.js'
