@@ -1,8 +1,12 @@
+"use client"
+
 import { Box, Modal, Typography, Button, Input } from '@mui/material';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import BASE_URL from '@/app/config';
 import { typography } from '@/app/themeValue';
+
+
 
 function EditProjectLink({
   open,
@@ -16,6 +20,7 @@ function EditProjectLink({
   });
   const [error, setError] = useState(null);
   const handleClose = () => setOpen(true);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -38,6 +43,7 @@ function EditProjectLink({
         } else {
           setError(data?.msg || 'Success');
           window.location.reload();
+        
         }
       })
       .catch((error) => {
