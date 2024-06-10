@@ -8,8 +8,9 @@ export async function GET(req) {
     const limit = 10;
     const type = searchParams.get('type')?.split(',') || [];
     const category = searchParams.get('category')?.split(',') || [];
+    
 
-    const query = {status:'public'};
+    const query = { status: 'public' };
 
     // Add filter conditions only if filters are provided
     if (type.length > 0 && type[0] !== '') {
@@ -22,7 +23,7 @@ export async function GET(req) {
     const totalCount = await Product.countDocuments(query);
     const totalPages = Math.ceil(totalCount / limit);
 
-    const product = await Product.find(query)
+    const products = await Product.find(query)
       .sort({ createdAt: 'desc' })
       .populate('user')
       .skip((page - 1) * limit)
@@ -30,7 +31,7 @@ export async function GET(req) {
 
     return NextResponse.json(
       {
-        product,
+        products,
         page,
         totalPages,
         totalCount,
@@ -38,7 +39,7 @@ export async function GET(req) {
       { status: 200 }
     );
   } catch (err) {
-    console.log(err);
-    return NextResponse.json({ message: "Error", err }, { status: 500 });
+    console.error("An error occurred while fetching products:", err);
+    return NextResponse.json({ message: "Error fetching products", error: err.message }, { status: 500 });
   }
 }
