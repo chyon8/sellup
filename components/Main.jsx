@@ -55,7 +55,7 @@ function Main() {
   <Box sx={{mb:'30px'}}>
     <Typography sx={{color:'#F0F0F0'}} fontWeight='600' fontSize='34px'>프로젝트</Typography>
     <Button onClick={openFilter} sx={{mb:'24px',bgcolor:'#00FF66',mt:'15px'}} >
-     {isOpen ? <Typography fontWeight='700' fontSize='14px' sx={{color:'#0A0A0A'}} >필터 닫기</Typography> : <Typography fontSize='14px' fontWeight='700' sx={{color:'#0A0A0A'}}>필터 열기</Typography>} 
+     {isOpen ? <Typography fontWeight='500' fontSize='14px' sx={{color:'#0A0A0A'}} >필터 닫기</Typography> : <Typography fontSize='14px' fontWeight='500' sx={{color:'#0A0A0A'}}>필터 열기</Typography>} 
       </Button>
 {isOpen && ( 
 

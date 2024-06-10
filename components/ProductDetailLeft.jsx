@@ -175,7 +175,7 @@ const ProductDetailLeft = () => {
         <Box sx={{ padding: '20px', display: 'grid', gap: 2 }}>
           <Typography textAlign='center' variant='answer'>로그인 하고 자세한 판매자 정보를 확인해보세요!</Typography>
           <Button onClick={() => signIn("google")} sx={{ color: "#0A0A0A", bgcolor: '#00FF66' }}>
-            <Typography>로그인</Typography>
+            <Typography fontWeight='600'>로그인</Typography>
           </Button>
         </Box>
       )}

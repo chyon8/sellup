@@ -3,8 +3,8 @@
 import UserInfo from "@/components/UserInfo";
 
 import { signOut,useSession  } from "next-auth/react";
-import { Button,Typography } from "@mui/material";
-
+import { Box, Button,Typography,Container } from "@mui/material";
+import MyProduct from "@/components/MyProduct";
 
 const getUserProfile = async () => {
     try {
@@ -27,20 +27,16 @@ const Profile = () => {
   return (
 
 
-    <div className="p-4">
+    <Container >
 
 <UserInfo/>
 
 
-{ status !== 'unauthenticated' && (
 
-<Button sx={{ color:'#0A0A0A', backgroundColor: '#00FF66',}}
-onClick={() => signOut()} 
-    ><Typography >로그아웃</Typography>
-  </Button>
+<MyProduct/>
 
-)}    
-     </div>
+
+     </Container>
 
 
 

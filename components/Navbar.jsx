@@ -47,9 +47,9 @@ export default function Navbar() {
       ) : (
 
     
-        <Button sx={{ color:'#0A0A0A', backgroundColor: '#00FF66',}}
+        <Button sx={{ color:'#0A0A0A', backgroundColor: '#252525',color:'#FFFFFF'}}
         onClick={() => signIn("google")} 
-            ><Typography >로그인</Typography>
+            ><Typography fontWeight='600' >로그인</Typography>
           </Button>
       
 

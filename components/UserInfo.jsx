@@ -1,16 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import SignInBtn from "./SignInBtn";
-import { Container,Typography,Box } from "@mui/material";
-import { useSession } from "next-auth/react";
+import { Typography,Box,Button } from "@mui/material";
+import { useSession,signOut } from "next-auth/react";
 
 export default function UserInfo() {
   const { status, data: session } = useSession();
 
   if (status === "authenticated") {
     return (
-      <Container>
+      <Box>
+
+
+        <Box display='flex'>
         <Image
           className="rounded-full"
           src={session?.user?.image}
@@ -18,16 +20,40 @@ export default function UserInfo() {
           height={60}
           alt="user"
         />
-        <Box sx={{disaply:'grid',gap:3}}>
-        <Typography variant="answer" > {session?.user?.name}</Typography>
-      <Typography variant="answer" >{session?.user?.email}</Typography>
-  
+        <Box sx={{disaply:'grid',gap:3,ml:'15px',mt:'8px'}}>
+        <Typography sx={{ml:'8px',mb:'5px'}} variant="answer" > {session?.user?.name}</Typography>
+        <Button sx={{  color:'#FFFFFF',
+            backgroundColor: '#252525',}} onClick={() => signOut()} 
+      ><Typography >로그아웃</Typography>
+    </Button>
+   
         </Box>
+
+    
+    
+        </Box>
+
+
+
+  
+
+  
+
       
-      </Container>
+
+
+      </Box>
      
     );
   } else {
     return ;
   }
 }
+
+
+
+
+
+
+  
+  
