@@ -63,7 +63,7 @@ function MyProduct() {
         ) : (
             <Box display='grid' sx={{gap:3,mt:'14px'}}>
                 <Typography sx={{color:'#FFFFFF'}} fontSize="18px">등록하신 프로젝트가 없어요! </Typography>
-                <a href={'/add'}>
+                <a style={{textDecoration:'none'}} href={'/add'}>
                 <Button sx={{ color: '#0A0A0A', backgroundColor: '#00FF66', }}><Typography>프로젝트 등록하기</Typography></Button></a>
                 
              </Box>

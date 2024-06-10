@@ -19,7 +19,7 @@ function ProductImage({product}) {
               {product.productImages.map((image, index) => (
                 <img
                   key={index}
-                  style={{ borderRadius: '20px', width: '100%', height: '500px' }}
+                  style={{ borderRadius: '20px', width: '100%', height: {xs:'400px' ,sm:'500px',md:'500px',lg:'500px'} }}
                   src={image}
                   alt={`productImage-${index}`}
                 />
