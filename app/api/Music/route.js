@@ -1,4 +1,4 @@
-import Music from "@/models/Music";
+import Music from "";
 import { NextResponse } from "next/server";
 
 
