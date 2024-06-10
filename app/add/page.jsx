@@ -2,15 +2,20 @@
 
 import { Container,Box } from "@mui/material";
 import { getServerSession } from "next-auth";
-
+import { redirect } from "next/navigation";
 import User from '@/models/User'; 
 
 const Home = async () => {
 
   const session = await getServerSession();
-  const userEmail = session.user.email
+  const userEmail = session?.user.email
   const user = await User.findOne({ email: userEmail });
-const userId=(user._id.toString())
+  const userId=(user?._id.toString())
+
+  
+  if(!session){
+    redirect('/')
+  }
 
   return (
     <Container>

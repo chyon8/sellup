@@ -6,6 +6,8 @@ import CardItem from "./CardItem";
 import BASE_URL from '../app/config.js'
 import PaginationRounded from "./Pagination"; 
 
+
+
 function MyProduct() {
   const [data, setData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -61,7 +63,8 @@ function MyProduct() {
         ) : (
             <Box display='grid' sx={{gap:3,mt:'14px'}}>
                 <Typography sx={{color:'#FFFFFF'}} fontSize="18px">등록하신 프로젝트가 없어요! </Typography>
-                <Button sx={{ color: '#0A0A0A', backgroundColor: '#00FF66', }}><Typography>프로젝트 등록하기</Typography></Button>
+                <a href={'/add'}>
+                <Button sx={{ color: '#0A0A0A', backgroundColor: '#00FF66', }}><Typography>프로젝트 등록하기</Typography></Button></a>
                 
              </Box>
         )}

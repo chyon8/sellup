@@ -2,9 +2,11 @@
 
 import UserInfo from "@/components/UserInfo";
 
-import { signOut,useSession  } from "next-auth/react";
-import { Box, Button,Typography,Container } from "@mui/material";
+import { useSession  } from "next-auth/react";
+import { Container } from "@mui/material";
 import MyProduct from "@/components/MyProduct";
+import { redirect } from "next/navigation";
+
 
 const getUserProfile = async () => {
     try {
@@ -23,6 +25,10 @@ const Profile = () => {
   
   const { status } = useSession();
 
+
+  if(status === "unauthenticated"){
+    redirect('/')
+  }
 
   return (
 
