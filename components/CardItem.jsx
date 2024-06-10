@@ -181,20 +181,20 @@ function CardItem({data}) {
                 
                 <Box sx={{ mt:'10px', p:1, flex:1, display:'grid',gap:2,textAlign:'center'}}>
                 <Typography>종류</Typography>
-                <Typography>{data.type.join(', ')}</Typography>
+                <Typography fontSize='12px'>{data.type.join(', ')}</Typography>
 
               
                 </Box>
 
                 <Box sx={{mt:'10px', p:1,flex:1, display:'grid', gap:2, textAlign:'center'}}>
                 <Typography>판매 가격</Typography>
-                  <Typography>{data.price? data.price + "원" : "합의 가능"}</Typography>
+                  <Typography fontSize='12px'>{data.price? data.price.toLocaleString() + "원" : "합의 가능"}</Typography>
              
                 </Box>
 
                 <Box sx={{mt:'10px',p:1,flex:1, display:'grid',gap:2,textAlign:'center'}}>
                 <Typography>수익</Typography>
-                  <Typography>{data.revenue}</Typography>
+                  <Typography fontSize='12pz'>{data.revenue}</Typography>
                  
                 </Box>
               

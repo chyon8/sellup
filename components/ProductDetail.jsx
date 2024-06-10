@@ -48,12 +48,12 @@ const ProductDetail = () => {
   
 <Box sx={{display:'grid'}}>
 
-<ProductThumbnail product={product}/>
 
-    <Box className="productDetail"  sx={{ display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'},border: '1px solid #222222', borderRadius: '20px', padding: {xs:'0px',sm:'25px',md:'25px',lg:'25px'},borderTop:'0px' }}>
+
+    <Box className="productDetail"  sx={{ display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'},border: '1px solid #222222', borderRadius: '20px', padding: {xs:'0px',sm:'25px',md:'25px',lg:'25px'} }}>
 
       <Box className="productDetailLeft" sx={{flex:2}}>
-
+      <ProductThumbnail product={product}/>
 {/*
       <Box className="index" sx={{
         zIndex: 1, position: 'sticky', 
@@ -106,7 +106,7 @@ const ProductDetail = () => {
 
 
 
-     <Box  className="productRight" display="grid" sx={{flex:1, borderRadius: '20px', mt:'25px', flex:1,
+     <Box  className="productRight" display="grid" sx={{flex:1, borderRadius: '20px', mt:'25px', flex:1,position:'sticky',top:0,zIndex:1,
     mb:'15px',ml:{lg:'30px'}, height:'fit-content' }}>
 <ProductDetailLeft/>
 </Box>

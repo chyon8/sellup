@@ -9,7 +9,7 @@ export default function Navbar() {
   const { status,data: session } = useSession();
 
   return (
-    <Box>
+    <Container>
     <Box sx={{ bgcolor:'#191919',border:'1px solid #252525', boxShadow: '5px 6px 20px #000000',height:'auto',
       borderRadius:'15px',paddingTop:'15px',paddingRight:'15px',paddingBottom:'15px',paddingLeft:'35px',mb:'35px'}} 
     className="  flex justify-between items-center shadow-md bg-page">
@@ -63,6 +63,6 @@ export default function Navbar() {
            
       )}
     </Box>
-    </Box>
+    </Container>
   );
 }

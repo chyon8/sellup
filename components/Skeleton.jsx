@@ -39,17 +39,6 @@ const Skeleton = () => {
 </div>
 
 
-
-
-
-
-
-
- 
-
-
-
-
   </div>
 
 

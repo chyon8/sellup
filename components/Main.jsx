@@ -1,11 +1,12 @@
 "use client";
 
-import { Box,Typography,Button } from "@mui/material";
+import { Box,Typography,Button, Skeleton } from "@mui/material";
 import { useEffect,useState } from "react";
 import CardItem from "./CardItem";
 import BASE_URL from '../app/config.js'
 import PaginationRounded from "./Pagination"; 
 import Filter from '../components/Filter'
+import SkeletonMain from "./SkeletonMain";
 
 function Main() {
 
@@ -97,10 +98,10 @@ function Main() {
 </Box>
           )))
           :(
-            <p>skelton</p>
+           <SkeletonMain/>
           )}
 
-          {data?.totalCount === 0 && (<Typography variant="answer">찾으시는 프로젝트가 없어요..</Typography>)} 
+          {data?.totalCount === 0 && (<Typography variant="answer">프로젝트가 없습니다.</Typography>)} 
 
         </Box>
 
