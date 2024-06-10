@@ -9,7 +9,7 @@ export async function GET(req) {
     const type = searchParams.get('type')?.split(',') || [];
     const category = searchParams.get('category')?.split(',') || [];
 
-    const query = {};
+    const query = {status:'public'};
 
     // Add filter conditions only if filters are provided
     if (type.length > 0 && type[0] !== '') {
