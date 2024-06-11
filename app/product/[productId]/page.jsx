@@ -16,8 +16,7 @@ const userId = session?.user?.id
    {/*<Box sx={{display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'} }}>  </Box>*/}
 
 
-   <ProductDetail userId= {userId
-   }/>
+   <ProductDetail userId={userId}/>
 
   
  

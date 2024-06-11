@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       
           <div className="flex flex-col">
            
-            <div className="flex-grow overflow-y-auto bg-page text-default-text">
+            <div className="flex-grow bg-page text-default-text">
        <AppRouterCacheProvider>
        <ThemeProvider theme={theme}>
    

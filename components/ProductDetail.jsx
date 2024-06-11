@@ -25,6 +25,7 @@ const ProductDetail = (userId) => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -40,6 +41,8 @@ const ProductDetail = (userId) => {
     fetchData();
   }, [productId]);
 
+
+
   if (loading) {
     return (
       <Box sx={{ display:{xs:'grid',sm:'grid',md:'grid',lg:'flex'}}}>
@@ -52,14 +55,10 @@ const ProductDetail = (userId) => {
     </Box>)
   }
 
-  if (!product) {
-    return <p>Product not found</p>;
-  }
 
-  const title = `${product.title} - My Store`;
-  const description = product.description;
-  const imageUrl = product.thumbnail;
-  const currentUrl = `${BASE_URL}/${product.id}`;
+  if (!product) {
+    return <Typography variant='answer' fontweight="600">Product not found</Typography>;
+  }
 
   return (
 
