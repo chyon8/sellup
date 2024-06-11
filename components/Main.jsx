@@ -103,7 +103,12 @@ function Main() {
            <SkeletonMain/>
           )}
 
-          {data?.totalCount === 0 && (<Typography variant="answer">프로젝트가 없습니다.</Typography>)} 
+          {data?.totalCount === 0 && (
+            <Box sx={{display:'grid',gap:1}}>
+              <Typography fontWeight="600" variant="answer">찾으시는 프로젝트를 발견하지 못했어요...</Typography>
+            <Typography fontWeight="600" variant="answer"> 다른 키워드를 검색해보세요!</Typography>
+            </Box>
+            )} 
 
         </Box>
 
