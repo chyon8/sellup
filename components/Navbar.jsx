@@ -15,14 +15,15 @@ export default function Navbar() {
     className="  flex justify-between items-center shadow-md">
     
 
+    <Link className="font-bold text-lg" href={"/"} style={{textDecoration:'none',color:'white'}}>
 <Box sx={{display:'flex'}}>
     <img src="https://i.ibb.co/Bc10XpB/sellup.jpg" alt="logo" style={{width:'30px',height:'30px'}} />
 
-      <Link className="font-bold text-lg" href={"/"} style={{textDecoration:'none',color:'white'}}>
-       <Typography fontWeight='500' fontSize='18px'sx={{mt:'7px',ml:'4px'}} >셀업</Typography> 
-      </Link>
-      </Box>
 
+       <Typography fontWeight='500' fontSize='18px'sx={{mt:'7px',ml:'4px'}} >셀업</Typography> 
+
+      </Box>
+      </Link>
       {status === "authenticated" ? (
 
 <Box className="flex">
