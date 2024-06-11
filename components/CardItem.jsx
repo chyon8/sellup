@@ -22,7 +22,7 @@ function CardItem({data,editable,setRefreshCount}) {
     try {
       setRefreshCount((count) => count + 1);
       setOpen(false);
-      const response = await fetch(`${BASE_URL}/api/product/delete`, {
+      const response = await fetch(`${BASE_URL}/api/Product/delete`, {
         method: 'DELETE',
         body: JSON.stringify(productId),
        
