@@ -30,11 +30,11 @@ const productSchema = new Schema(
       type:String
     },
 
-    status: {
-      type: String,
-      enum: ['public', 'private'],
-      default: 'public',
-    },
+   status: {
+    type: String,
+    enum: ['public', 'private'],
+    default: 'public',
+  },
 
 
     
