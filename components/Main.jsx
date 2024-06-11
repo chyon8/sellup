@@ -77,7 +77,7 @@ function Main() {
           }}
         >
           
-          {data?.product? (data?.product.map((products,index)=>(
+          {data?.products ? (data?.products.map((products,index)=>(
   <Box
   key={index}
   
@@ -91,6 +91,7 @@ function Main() {
 >
   <CardItem 
   data={products} 
+  editable={false}
 
   />
 

@@ -1,20 +1,54 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Box,Typography,Card,CardActions,CardContent,Chip,Avatar } from "@mui/material";
+import { Box,Typography,Card,CardActions,CardContent,Chip,Avatar,Button } from "@mui/material";
 import Link from "next/link";
 import { typography } from "@/app/themeValue";
 import TimeSincePost from "./TImeSincePost";
 import { useSession  } from "next-auth/react";
+import DeleteIcon from '@mui/icons-material/Delete';
+import { useState } from "react";
+import Warning from "./Warning";
+import BASE_URL from "@/app/config";
 
-function CardItem({data}) {
+function CardItem({data,editable,setRefreshCount}) {
 
-console.log(data)
+  const [open, setOpen] = useState(false);
   const { data: session } = useSession();
+  
+
+
+  const deleteMyReview = async (productId) => {
+    try {
+      setRefreshCount((count) => count + 1);
+      setOpen(false);
+      const response = await fetch(`${BASE_URL}/api/product/delete`, {
+        method: 'DELETE',
+        body: JSON.stringify(productId),
+       
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete');
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+
+
+
+
+
+
+
+
 
   
     return  (
   <Box>
+
 
 
    <Card
@@ -31,16 +65,20 @@ console.log(data)
               }}
             >
 
+<Warning open={open} setOpen={setOpen} handleDelete={() => deleteMyReview(data._id)} />
+
            
               <CardContent sx={{ padding: '0' }}>
 
+<Box sx={{display:'flex', justifyContent:'space-between'}}>
               <Box mb={2} sx={{display:'flex',gap:1}}>
                       {data.category.map((cat,index) =>(
                          <Chip sx={{mr:'3px',paddingTop:'3px',paddingBottom:'3px',paddingLeft:'3px',paddingRight:'3px'}} key={index} size="small" variant="outlined" label={cat}/>
-                      ))}
-                    
-                  
-                    </Box>
+                      ))} </Box>
+{editable && (<Box><Button  onClick={() => {setOpen(true);}} sx={{padding:0}}>  <DeleteIcon/></Button></Box>
+)}
+
+</Box>
 
               <Link style={{ textDecorationLine: 'none', color: 'inherit' }} 
                href={`/product/${data._id}`}>

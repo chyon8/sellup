@@ -13,30 +13,30 @@ function ProductDescBody({product}) {
 
                     <Box><Typography sx={{ color: '#FFFFFF' }} fontSize='36px'>{product.title}</Typography></Box>
         <Box>
-          <Typography sx={{ mb: '14px' }} variant='question'>어떤 종류의 프로젝트인가요?</Typography>
+          <Typography sx={{ mb: '14px' }} variant='question'>프로젝트 종류</Typography>
           <Typography variant='answer'>{product.type.join(',')}</Typography>
         </Box>
         {product.stack && (
           <Box>
-            <Typography sx={{ mb: '14px' }} variant='question'>기술 스택에 대해서 말씀해주세요</Typography>
+            <Typography sx={{ mb: '14px' }} variant='question'>기술 스택</Typography>
             <Typography variant='answer'>{product.stack}</Typography>
           </Box>
         )}
         <Box>
-          <Typography sx={{ mb: '14px' }} variant='question'>어떤 카테고리의 프로젝트인가요?</Typography>
+          <Typography sx={{ mb: '14px' }} variant='question'>프로젝트 카테고리</Typography>
           <Typography variant='answer'>{product.category.join(',')}</Typography>
         </Box>
         <Box>
-          <Typography sx={{ mb: '14px' }} variant='question'>사이드 프로젝트에 대해 설명해주세요</Typography>
+          <Typography sx={{ mb: '14px' }} variant='question'>사이드 프로젝트에 대한 설명</Typography>
           <Typography variant='answer'>{product.description}</Typography>
         </Box>
         <Box>
-          <Typography sx={{ mb: '14px' }} variant='question'>사이드 프로젝트를 판매하는 이유를 말씀해주세요</Typography>
+          <Typography sx={{ mb: '14px' }} variant='question'>판매하는 이유</Typography>
           <Typography variant='answer'>{product.whysell}</Typography>
         </Box>
         {product.revenue == "Y" && (
           <Box>
-            <Typography sx={{ mb: '14px' }} variant='question'>수익화 여부 및 설명 있으면</Typography>
+            <Typography sx={{ mb: '14px' }} variant='question'>수익 설명 </Typography>
             <Typography variant='answer'>{product.revenueDesc}</Typography>
           </Box>
         )}

@@ -11,8 +11,8 @@ import PaginationRounded from "./Pagination";
 function MyProduct() {
   const [data, setData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [refreshCount, setRefreshCount] = useState(0);
 
-  console.log(data);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -30,7 +30,7 @@ function MyProduct() {
     };
 
     fetchData();
-  }, [currentPage]);
+  }, [currentPage,refreshCount]);
 
   return (
     <Box sx={{ mb: '30px', mt: '80px' }}>
@@ -57,7 +57,7 @@ function MyProduct() {
                 bgcolor: '#191919',
               }}
             >
-              <CardItem data={product} />
+              <CardItem editable={true} data={product} setRefreshCount={setRefreshCount} />
             </Box>
           ))
         ) : (
