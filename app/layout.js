@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
 
 
 </head>
-      <body className={inter.className}>
+      <body className={inter.className} >
       
-          <div className="flex flex-col h-screen max-h-screen">
+          <div className="flex flex-col">
            
             <div className="flex-grow overflow-y-auto bg-page text-default-text">
        <AppRouterCacheProvider>
