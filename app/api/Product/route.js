@@ -1,5 +1,6 @@
 import Product from "@/models/Product";
 import { NextResponse } from "next/server";
+import User from "@/models/User";
 
 export async function GET(req) {
   try {
@@ -8,7 +9,7 @@ export async function GET(req) {
     const limit = 10;
     const type = searchParams.get('type')?.split(',') || [];
     const category = searchParams.get('category')?.split(',') || [];
-    
+
 
     const query = { status: 'public' };
 

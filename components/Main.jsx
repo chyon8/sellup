@@ -32,7 +32,7 @@ function Main() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/api/Product?page=${currentPage}`);
+        const response = await fetch(`${BASE_URL}/api/Pproduct?page=${currentPage}`);
         const result = await response.json();
         setData(result);
       } catch (error) {

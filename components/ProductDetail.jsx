@@ -26,7 +26,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/api/Product/${productId}`);
+        const response = await fetch(`${BASE_URL}/api/product/${productId}`);
         const result = await response.json();
         setProduct(result.product);
         setLoading(false);

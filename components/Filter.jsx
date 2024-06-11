@@ -37,7 +37,7 @@ export default function Filter({onDataReceived}) {
       type: typeValue.join(','),
       category: catValue.join(',')
     });
-    const response = await fetch(`/api/Product?${params}`);
+    const response = await fetch(`/api/product?${params}`);
     const data = await response.json();
     onDataReceived(data);
 
