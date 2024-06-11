@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
 <link rel="shortcut icon" href="images/favicon.jpg" />
 <script async src="https://tally.so/widgets/embed.js"></script>
 
+<meta property="og:image" content="https://i.ibb.co/Bc10XpB/sellup.jpg" />
 
 </head>
       <body className={inter.className} >
