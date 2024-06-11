@@ -19,7 +19,7 @@ import SkeletonDetailSocial from './SkeletonDetailSocial';
 
 
 
-const ProductDetail = () => {
+const ProductDetail = (userId) => {
   const router = useParams();
   const productId = router.productId;
   const [product, setProduct] = useState(null);
@@ -129,7 +129,7 @@ const ProductDetail = () => {
             flex: 1, borderRadius: '20px', mt: '25px', flex: 1, position: 'sticky', top: 0, zIndex: 1,
             mb: '15px', ml: { lg: '30px' }, height: 'fit-content'
           }}>
-            <ProductDetailLeft />
+            <ProductDetailLeft userId={userId} />
           </Box>
 
 

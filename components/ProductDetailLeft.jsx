@@ -15,7 +15,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
 import AddIcon from '@mui/icons-material/Add';
 
-const ProductDetailLeft = () => {
+const ProductDetailLeft = ({userId}) => {
   const router = useParams();
   const productId = router.productId;
   const [product, setProduct] = useState(null);
@@ -60,6 +60,26 @@ const ProductDetailLeft = () => {
     setSocialType(type);
     setOpen(true);
   };
+
+  const handleContact = async () => {
+    try {
+    
+      const response = await fetch(`${BASE_URL}/api/Product/analytics`, {
+        method: 'POST',
+        body: JSON.stringify({productId,userId:userId.userId}),
+       
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to add in db');
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+
+
 
   return (
     <Box sx={{ bgcolor: '#252525', borderRadius: '20px', paddingTop: '20px', paddingBottom: '20px' }}>
@@ -159,8 +179,10 @@ const ProductDetailLeft = () => {
           </Box>
 
           <Box sx={{mt:'30px'}}>
-            <Link style={{textDecoration:'none'}} href={`mailto:${product.contact}`}>
-              <Button fullWidth sx={{ bgcolor:'#00FF66', color:'#0A0A0A' }}>
+            <Link style={{textDecoration:'none'}} href={`mailto:${product.contact}`}
+         
+            >
+              <Button onClick={handleContact} fullWidth sx={{ bgcolor:'#00FF66', color:'#0A0A0A' }}>
                 <Typography>연락하기</Typography>
               </Button>
             </Link>
