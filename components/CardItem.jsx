@@ -81,7 +81,7 @@ function CardItem({data,editable,setRefreshCount}) {
 </Box>
 
               <Link style={{ textDecorationLine: 'none', color: 'inherit' }} 
-               href={`/product/${data._id}`}>
+               href={`/Product/${data._id}`}>
         <Box
           sx={{
             width: '100%',
@@ -169,7 +169,7 @@ function CardItem({data,editable,setRefreshCount}) {
                   </Box>
                 </Box>
 
-                <Link href={`/product/${data._id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                <Link href={`/Product/${data._id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
                   <Box sx={{ width: '234px' }}>
                     <Typography
                      

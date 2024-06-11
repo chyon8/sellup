@@ -1,14 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Box,Typography,useMediaQuery } from "@mui/material";
-import { Content } from "next/font/google";
+import { Box,Typography } from "@mui/material";
 import Carousel from 'react-material-ui-carousel';
 
 
 function ProductImage({product}) {
 
-    const isLargeScreen = useMediaQuery('(min-width:1200px)');
+
 
 
   
