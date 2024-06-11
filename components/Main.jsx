@@ -7,6 +7,7 @@ import BASE_URL from '../app/config.js'
 import PaginationRounded from "./Pagination"; 
 import Filter from '../components/Filter'
 import SkeletonMain from "./SkeletonMain";
+import TallyFeedbackBtn from "./TallyFeedbackBtn";
 
 function Main() {
 
@@ -111,6 +112,8 @@ function Main() {
      <PaginationRounded onPageChange={handlePageChange} totalPages={data?.totalPages}/>
 
      </Box>
+
+     <TallyFeedbackBtn/>
 
 </Box>
     
