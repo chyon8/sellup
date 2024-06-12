@@ -19,7 +19,6 @@ import SkeletonDetailSocial from './SkeletonDetailSocial';
 import CustomCarousel from './CustomCarousel';
 import Carousel from 'react-material-ui-carousel';
 
-
 const ProductDetail = (userId) => {
   const router = useParams();
   const productId = router.productId;
