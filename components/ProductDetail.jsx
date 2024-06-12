@@ -16,7 +16,8 @@ import ProductDetailLeft from './ProductDetailLeft';
 import TimeSincePost from './TImeSincePost';
 import SkeletonDetail from './SkeletonDetail';
 import SkeletonDetailSocial from './SkeletonDetailSocial';
-
+import CustomCarousel from './CustomCarousel';
+import Carousel from 'react-material-ui-carousel';
 
 
 const ProductDetail = (userId) => {
@@ -118,7 +119,13 @@ const ProductDetail = (userId) => {
             </Box>
 
             <Box className="projectImg" sx={{ mt: '15px', borderRadius: '20px', bgcolor: '#252525', padding: '25px' }}>
+           
+       <Box sx={{ zIndex: 0 }} autoPlay={false}>
               <ProductImage product={product} />
+              </Box> 
+
+
+
             </Box>
           </Box>
 

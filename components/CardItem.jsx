@@ -100,8 +100,8 @@ function CardItem({data,editable,setRefreshCount}) {
             top: 0,
             left: 0
           }}
-          //src={data?.thumbnail && data.thumbnail.length > 0 ? data.thumbnail : "https://i.ibb.co/Bc10XpB/sellup.jpg"}
-          src={data?.thumbnail}
+          src={data?.thumbnail && data.thumbnail.length > 0 ? data.thumbnail : "https://i.ibb.co/Bc10XpB/sellup.jpg"}
+          //src={data?.thumbnail}
          
    
           alt='product'

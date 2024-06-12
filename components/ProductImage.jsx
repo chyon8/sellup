@@ -11,12 +11,13 @@ function ProductImage({ product }) {
   return (
     <Box>
       {product.productImages && product.productImages.length > 0 ? (
-        <Carousel sx={{ zIndex: 0 }} autoPlay={false}>
+        <Box>
           {product.productImages.map((image, index) => (
             <Box
               key={index}
               component="img"
               sx={{
+                mt:'20px',
                 borderRadius: '20px',
                 width: '100%',
                 height: '100%',
@@ -32,7 +33,7 @@ function ProductImage({ product }) {
               }}
             />
           ))}
-        </Carousel>
+        </Box>
       ) : (
         <Typography variant='answer'>이미지가 없습니다</Typography>
       )}

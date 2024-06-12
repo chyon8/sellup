@@ -28,11 +28,11 @@ function ProductDescBody({product}) {
         </Box>
         <Box>
           <Typography sx={{ mb: '14px' }} variant='question'>사이드 프로젝트에 대한 설명</Typography>
-          <Typography variant='bodyText'>{product.description}</Typography>
+          <Typography sx={{whiteSpace:'pre-line'}} variant='bodyText'>{product.description}</Typography>
         </Box>
         <Box>
           <Typography sx={{ mb: '14px' }} variant='question'>판매하는 이유</Typography>
-          <Typography variant='bodyText'>{product.whysell}</Typography>
+          <Typography sx={{whiteSpace:'pre-line'}} variant='bodyText'>{product.whysell}</Typography>
         </Box>
         {product.revenue == "Y" && (
           <Box>

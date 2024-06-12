@@ -118,7 +118,7 @@ function Main() {
 
      </Box>
 
-    {/* <TallyFeedbackBtn/>*/}
+     <TallyFeedbackBtn/>
 
 </Box>
     
