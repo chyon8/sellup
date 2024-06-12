@@ -108,7 +108,7 @@ const ProductDetailLeft = ({userId}) => {
             <Typography variant='question'>소셜 프로필</Typography>
           </Box>
           <Box sx={{ mt: '24px', ml: '38px', display: 'grid', gap: 2 }}>
-            <Box sx={{ display: 'flex', gap: 1 }}>
+            <Box onClick={handleContact} sx={{ display: 'flex', gap: 1 }}>
               <EmailIcon sx={{color:'#FFFFFF'}}/>
               <Link style={{ textDecoration: 'none' }} href={`mailto:${product.contact}`}>
                 <Typography sx={{ color: 'grey',mt:'2px' }} variant='answer'>{product.contact}</Typography>
