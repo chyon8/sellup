@@ -53,8 +53,19 @@ function Main() {
 
     return (
 
+
     
   <Box sx={{mb:'30px'}}>
+
+<Box sx={{height:'180px'}}>
+<Box display='grid' sx={{gap:3,mt:'34px',mb:'50px', justifyContent:'center'}}>
+                <Typography sx={{textAlign:'center', color:'#FFFFFF'}} fontSize="18px">첫 프로젝트를 등록해보세요! </Typography>
+                <a style={{textDecoration:'none',textAlign:'center'}} href={'/add'}>
+                <Button sx={{ color: '#0A0A0A', backgroundColor: '#00FF66', }}><Typography>프로젝트 등록하기</Typography></Button></a>
+                
+             </Box>
+             </Box>
+
     <Typography sx={{color:'#F0F0F0'}} fontWeight='600' fontSize='34px'>프로젝트</Typography>
     <Button onClick={openFilter} sx={{mb:'24px',bgcolor:'#00FF66',mt:'15px'}} >
      {isOpen ? <Typography fontWeight='500' fontSize='14px' sx={{color:'#0A0A0A'}} >필터 닫기</Typography> : <Typography fontSize='14px' fontWeight='500' sx={{color:'#0A0A0A'}}>필터 열기</Typography>} 

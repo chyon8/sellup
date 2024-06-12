@@ -15,7 +15,7 @@ const Home = async () => {
 
   
   if(!session){
-    redirect('/')
+    redirect('/login')
   }
 
   return (

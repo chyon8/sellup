@@ -27,7 +27,7 @@ const Profile = () => {
 
 
   if(status === "unauthenticated"){
-    redirect('/')
+    redirect('/login')
   }
 
   return (
