@@ -82,17 +82,17 @@ const ProductDetailLeft = ({userId}) => {
 
 
   return (
-    <Box sx={{ bgcolor: '#252525', borderRadius: '20px', paddingTop: '20px', paddingBottom: '20px' }}>
+    <Box sx={{  bgcolor: '#252525', borderRadius: '20px', paddingTop: '20px', paddingBottom: '20px' }}>
       {status === "authenticated" ? (
         <Box sx={{ padding: '15px', display: 'grid' }}>
-          <Box sx={{ display: 'flex', gap: 2 }}>
+          <Box sx={{display: 'flex', gap: 2,overflow:'hidden',textOverflow: 'ellipsis' }}>
             <LinkIcon sx={{ color: '#FFFFFF' }} />
             <Typography variant='question'>프로젝트 링크</Typography>
           </Box>
           <Box sx={{ mt: '24px', ml: '38px', display: "flex", gap: 1 }}>
             <LanguageIcon sx={{color:'#FFFFFF'}}/>
             <Link style={{ textDecoration: 'none' }} href={projectLink}>
-              <Typography sx={{ color: 'grey',mt:'2px' }} variant='answer'>
+              <Typography sx={{overflow:'hidden',textOverflow: 'ellipsis',maxWidth:'200px',color: 'grey',mt:'2px' }} variant='answer'>
                 {product.projectLink}
               </Typography>
             </Link>
@@ -123,7 +123,7 @@ const ProductDetailLeft = ({userId}) => {
               <Box sx={{ display: 'flex', gap: 1 }}>
                 <LanguageIcon sx={{color:'#FFFFFF'}}/>
                 <Link style={{ textDecoration: 'none' }} href={socialLink1}>
-                  <Typography sx={{ color: 'grey',mt:'2px' }} variant='answer'>{product.social1}</Typography>
+                  <Typography sx={{overflow:'hidden',textOverflow: 'ellipsis',maxWidth:'200px', color: 'grey',mt:'2px'}} variant='answer'>{product.social1}</Typography>
                 </Link>
                 {session?.user.id === product?.user._id && (
                   <Box onClick={() => handleEditClick('social1')}>
@@ -139,10 +139,10 @@ const ProductDetailLeft = ({userId}) => {
               )
             )}
             {product.social2 ? (
-              <Box sx={{ display: 'flex', gap: 1 }}>
+              <Box sx={{ overflow:'hidden',textOverflow: 'ellipsis',display: 'flex', gap: 1 }}>
                 <LanguageIcon sx={{color:'#FFFFFF'}}/>
                 <Link style={{ textDecoration: 'none' }} href={socialLink2}>
-                  <Typography sx={{ color: 'grey',mt:'2px' }} variant='answer'>{product.social2}</Typography>
+                  <Typography sx={{ overflow:'hidden',textOverflow: 'ellipsis',maxWidth:'200px',color: 'grey',mt:'2px' }} variant='answer'>{product.social2}</Typography>
                 </Link>
                 {session?.user.id === product?.user._id && (
                   <Box onClick={() => handleEditClick('social2')}>
@@ -158,10 +158,10 @@ const ProductDetailLeft = ({userId}) => {
               )
             )}
             {product.social3 ? (
-              <Box sx={{ display: 'flex', gap: 1 }}>
+              <Box sx={{ overflow:'hidden',textOverflow: 'ellipsis',display: 'flex', gap: 1 }}>
                 <LanguageIcon sx={{color:'#FFFFFF'}}/>
                 <Link style={{ textDecoration: 'none' }} href={socialLink3}>
-                  <Typography sx={{ color: 'grey',mt:'2px' }} variant='answer'>{product.social3}</Typography>
+                  <Typography sx={{ overflow:'hidden',textOverflow: 'ellipsis',maxWidth:'200px',color: 'grey',mt:'2px' }} variant='answer'>{product.social3}</Typography>
                 </Link>
                 {session?.user.id === product?.user._id && (
                   <Box onClick={() => handleEditClick('social3')}>
