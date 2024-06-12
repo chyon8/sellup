@@ -57,9 +57,9 @@ function Main() {
     
   <Box sx={{mb:'30px'}}>
 
-<Box sx={{height:'180px'}}>
-<Box display='grid' sx={{gap:3,mt:'34px',mb:'50px', justifyContent:'center'}}>
-                <Typography sx={{textAlign:'center', color:'#FFFFFF'}} fontSize="18px">첫 프로젝트를 등록해보세요! </Typography>
+<Box sx={{height:'150px'}}>
+<Box display='grid' sx={{gap:3,mt:'50px', justifyContent:'center'}}>
+                <Typography sx={{textAlign:'center', color:'#FFFFFF'}} fontSize="18px">프로젝트를 등록해보세요! </Typography>
                 <a style={{textDecoration:'none',textAlign:'center'}} href={'/add'}>
                 <Button sx={{ color: '#0A0A0A', backgroundColor: '#00FF66', }}><Typography>프로젝트 등록하기</Typography></Button></a>
                 
@@ -129,7 +129,7 @@ function Main() {
 
      </Box>
 
-     <TallyFeedbackBtn/>
+ <TallyFeedbackBtn/> 
 
 </Box>
     

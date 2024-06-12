@@ -15,14 +15,17 @@ export default function TallyFeedbackBtn() {
         width: '60px',
         height: '60px',
         zIndex: 1,
-        backgroundImage: "url('https://i.ibb.co/Bc10XpB/sellup.jpg')",
+        background:'white',
+        backgroundImage: "url('https://i.ibb.co/7Q13nnh/no-bg-sellup.png')",
         backgroundSize: 'cover',
         transition: 'all 200ms',
         ':hover': {
-          backgroundImage: "url('https://i.ibb.co/Bc10XpB/sellup.jpg')",
+          background:'white',
+          backgroundImage: "url('https://i.ibb.co/7Q13nnh/no-bg-sellup.png')",
           backgroundSize: 'cover',
           boxShadow: '0px 0px 20px 0px #00FF66',
           borderRadius: '165px',
+          
          
         },
       }}
@@ -34,4 +37,5 @@ export default function TallyFeedbackBtn() {
     </Button>
   );
 }
+
 
