@@ -32,10 +32,18 @@ const theme = createTheme({
   
       
     },
+    bodyText:{
+      textAlign:"left",
+      fontSize:14,
+      fontWeight:400,
+      color:'#FFFFFF'
+    },
     answer:{
       color:'#DDDDDD',
       fontSize:'14px',
-          display:'block'
+          display:'block',
+          letterSpacing: '0.04rem', 
+          lineHeight: '1.2rem'
    
     },
     timeSincePost: {
@@ -91,10 +99,13 @@ const theme = createTheme({
           ,paddingBottom:'10px',
           paddingLeft:'20px',
           borderRadius: 20,
+      
           '&:hover': {
             color:'#0A0A0A',
             backgroundColor: '#00FF66',
           },
+      
+       
         },
       },
     },

@@ -2,12 +2,12 @@
 
 import { Box, Typography, Button } from "@mui/material";
 import { useState,useEffect } from "react";
-import Link from "next/link";
+
 
 export default function Filter({onDataReceived}) {
   const [typeValue, setTypeValue] = useState([]);
   const [catValue, setCatValue] = useState([]);
-  const [refresh, setRefresh] = useState(false)
+
 
 
 
@@ -21,12 +21,14 @@ export default function Filter({onDataReceived}) {
   ];
 
   const handleTypeClick = (type) => {
+
     setTypeValue((prev) =>
       prev?.includes(type) ? prev.filter(t => t !== type) : [...prev, type]
     );
   };
 
   const handleCategoryClick = (cat) => {
+
     setCatValue((prev) =>
       prev?.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]
     );
@@ -49,32 +51,38 @@ export default function Filter({onDataReceived}) {
     <Box sx={{ mb: '40px' }}>
       <Box sx={{ mb: '30px' }}>
         <Typography fontSize='15px' fontWeight='600' sx={{ mb: '10px',color:'#FFFF' }}>종류</Typography>
+         <Box sx={{display:'flex',flexWrap:'wrap'}}>
         {fileter_type.map((type, index) => (
-          <Button
+        
+            <Box 
             onClick={() => handleTypeClick(type)}
-            sx={{ pt: '8px',pr:'20px',pb:'8px',pl:'20px', mt: '10px', mr: '10px', bgcolor: typeValue?.includes(type) ? '#00FF66' : '#252525' }}
+            sx={{ width:'fit-content',borderRadius:20 ,pt: '8px',pr:'20px',pb:'8px',pl:'20px', mt: '10px', mr: '10px',cursor:'pointer',bgcolor: typeValue?.includes(type) ? '#00FF66' : '#252525',}}
             key={index}
             size="small"
-          
           >
-            <Typography fontSize='14px' fontWeight='700' sx={{color:typeValue?.includes(type) ? '#0A0A0A': '#F0F0F0'}}>{type}</Typography>
-          </Button>
+            <Typography fontSize='14px' fontWeight='700' sx={{whiteSpace:'nowrap',color:typeValue?.includes(type) ? '#0A0A0A': '#F0F0F0'}}>{type}</Typography>
+          </Box>
+     
+
         ))}
+        </Box>
       </Box>
 
       <Box>
         <Typography fontWeight='600' fontSize='15px' sx={{ mb: '10px',color:'#FFFF' }}>카테고리</Typography>
+        <Box sx={{display:'flex',flexWrap:'wrap'}}>
         {fileter_category.map((cat, index) => (
-          <Button
+          <Box
             onClick={() => handleCategoryClick(cat)}
-            sx={{ pt: '8px',pr:'20px',pb:'8px',pl:'20px', mt: '10px', mr: '10px', bgcolor: catValue?.includes(cat) ? '#00FF66' : '#252525' }}
+            sx={{ width:'fit-content',borderRadius:20, pt: '8px',pr:'20px',pb:'8px',pl:'20px', mt: '10px', mr: '10px',cursor:'pointer' ,bgcolor: catValue?.includes(cat) ? '#00FF66' : '#252525' }}
             key={index}
             size="small"
            
           >
             <Typography fontSize='14px' fontWeight='700' sx={{color: catValue?.includes(cat) ? '#0A0A0A' :'#F0F0F0'}}>{cat}</Typography>
-          </Button>
+          </Box>
         ))}
+        </Box>
       </Box>
 
       <Box sx={{ mt: '35px', gap:2, display:'flex' }}>

@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Typography, Box,Container } from '@mui/material';
+import Link from 'next/link';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
 
@@ -21,11 +23,18 @@ boxShadow: '5px 5px 10px 0px #000000',mb:'28px'
 <Typography fontSize='15px' sx={{ mb: '14px',color:'#FFFFFF',mr:"25px",mt:'7px' }}>셀업</Typography>
 </Box>
 
+<Box sx={{display:'flex',justifyContent:'center'}}>
+
+<EmailIcon sx={{color:'#FFFFFF', mt:'3px',mr:'5px'}}/>
+  <Link style={{textDecoration:'none'}} href="mailto:sellup.projects@outlook.com">
+<Typography fontSize='15px' sx={{ mb: '14px',color:'#FFFFFF',mt:'7px',color:"#AAAAAA" }}>contact</Typography>
+</Link>
+</Box>
+
 
         <Box sx={{display:'flex',justifyContent:'center'}}>
         <Typography fontSize='14px' fontWeight='700px' sx={{mt:'3px',color:'#CCCCCC'}}>Copyright 2024 - All Right Reserved
-
-</Typography></Box> 
+    </Typography></Box> 
 
      
       </Box>
